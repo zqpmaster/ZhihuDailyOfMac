@@ -13,7 +13,7 @@ class Story: NSObject {
     let image:String
     let id:NSNumber
     
-    init(title:String,image:String,id:NSNumber) {
+    init(title:String,image:String,id:NSNumber) {//designated construct
 
         self.title=title
         self.image=image
