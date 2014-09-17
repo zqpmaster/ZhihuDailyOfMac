@@ -102,13 +102,11 @@
 		272EB79719BC925300E66775 /* ZhiHuDaily_Mac */ = {
 			isa = PBXGroup;
 			children = (
-				276EFAFA19BDE70F004967AF /* Resource */,
 				272EB79C19BC925300E66775 /* AppDelegate.swift */,
 				272EB79E19BC925300E66775 /* Images.xcassets */,
-				276EFAF319BDD1DD004967AF /* Story.swift */,
 				272EB7A019BC925300E66775 /* MainMenu.xib */,
-				27FEC15619C952AA00AC7101 /* DetailView.xib */,
-				27FEC15B19C952FF00AC7101 /* DetailView.swift */,
+				27FEC16319C9906600AC7101 /* Model */,
+				276EFAFA19BDE70F004967AF /* Resource */,
 				276EFAF819BDDE92004967AF /* Utility */,
 				276EFAF719BDDE84004967AF /* ViewController */,
 				272EB79819BC925300E66775 /* Supporting Files */,
@@ -145,6 +143,8 @@
 		276EFAF719BDDE84004967AF /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				27FEC15619C952AA00AC7101 /* DetailView.xib */,
+				27FEC15B19C952FF00AC7101 /* DetailView.swift */,
 				276EFAF519BDDE7E004967AF /* TableViewController.swift */,
 			);
 			name = ViewController;
@@ -166,6 +166,14 @@
 				276EFAFB19BDE715004967AF /* 选图_选中.png */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		27FEC16319C9906600AC7101 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				276EFAF319BDD1DD004967AF /* Story.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

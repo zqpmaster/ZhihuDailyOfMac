@@ -20,7 +20,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="335" height="580"/>
                     <subviews>
                         <webView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VLU-8h-KPk">
-                            <rect key="frame" x="0.0" y="0.0" width="335" height="580"/>
+                            <rect key="frame" x="0.0" y="0.0" width="335" height="445"/>
                             <webPreferences key="preferences" defaultFontSize="12" defaultFixedFontSize="12">
                                 <nil key="identifier"/>
                             </webPreferences>

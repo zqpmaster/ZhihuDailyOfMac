@@ -11,6 +11,6 @@ import Appkit
 
 extension NSImageView{
     func setImageWithUrlAsyn(url:String){
-    
+        
     }
 }
