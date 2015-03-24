@@ -33,7 +33,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         var arrayOfData=NSMutableArray()
         var managerAf=Manager.sharedInstance
         let url=NSURL(string: "http://news-at.zhihu.com/api/3/news/latest")
-        let urlRequest=NSURLRequest(URL: url)
+        let urlRequest=NSURLRequest(URL: url!)
         let request=managerAf.request(urlRequest)
         request.responseJSON { (request, resopnse, object, error) -> Void in
             var resDic=object as NSDictionary

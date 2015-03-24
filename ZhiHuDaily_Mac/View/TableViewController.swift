@@ -25,8 +25,8 @@ class TableViewController: NSObject,NSTableViewDelegate,NSTableViewDataSource {
         let tableCellView=tableView.makeViewWithIdentifier("MainCell", owner: self) as NSTableCellView
         let storyIn=contentOfTableView.objectAtIndex(row) as Story
         
-        tableCellView.textField.stringValue=storyIn.title
-        tableCellView.imageView.objectValue=NSImage(contentsOfFile: "选图_选中")
+        tableCellView.textField?.stringValue=storyIn.title
+        tableCellView.imageView?.image=NSImage(contentsOfFile: "选图_选中")
    
         return tableCellView
     }
@@ -38,7 +38,7 @@ class TableViewController: NSObject,NSTableViewDelegate,NSTableViewDataSource {
         
         let story:Story=self.contentOfTableView[row] as Story
         
-        self.detailView.indexCom=story.id
+        self.detailView.indexCom=story.id.integerValue
         self.tableView.window?.contentView.addSubview(detailView)
         
         NSLog("aaa")

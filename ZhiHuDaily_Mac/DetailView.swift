@@ -39,7 +39,7 @@ class DetailView: NSView {
         var managerAf=Manager.sharedInstance
         let urlStr="http://news-at.zhihu.com/api/3/news/"+String(ind)
         let url=NSURL(string:urlStr)
-        let urlRequest=NSURLRequest(URL: url)
+        let urlRequest=NSURLRequest(URL: url!)
         let request=managerAf.request(urlRequest)
         request.responseJSON { (request, response, object, error) -> Void in
             let dic=object as NSDictionary
