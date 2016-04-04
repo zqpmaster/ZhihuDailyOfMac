@@ -2,8 +2,8 @@
 //  Story.swift
 //  ZhiHuDaily_Mac
 //
-//  Created by ZQP on 14-9-8.
-//  Copyright (c) 2014年 ZQP. All rights reserved.
+//  Created by max on 14-9-8.
+//  Copyright (c) 2014年 max. All rights reserved.
 //
 
 import Cocoa

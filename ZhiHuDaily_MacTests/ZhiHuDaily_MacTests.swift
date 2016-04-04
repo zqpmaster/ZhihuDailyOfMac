@@ -2,8 +2,8 @@
 //  ZhiHuDaily_MacTests.swift
 //  ZhiHuDaily_MacTests
 //
-//  Created by ZQP on 14-9-7.
-//  Copyright (c) 2014年 ZQP. All rights reserved.
+//  Created by max on 14-9-7.
+//  Copyright (c) 2014年 max. All rights reserved.
 //
 
 import Cocoa

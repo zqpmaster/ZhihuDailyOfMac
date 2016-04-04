@@ -2,12 +2,12 @@
 //  AsynNSImageView.swift
 //  ZhiHuDaily_Mac
 //
-//  Created by ZQP on 14-9-17.
-//  Copyright (c) 2014年 ZQP. All rights reserved.
+//  Created by max on 14-9-17.
+//  Copyright (c) 2014年 max. All rights reserved.
 //
 
 import Foundation
-import Appkit
+import AppKit
 
 extension NSImageView{
     func setImageWithUrlAsyn(url:String){

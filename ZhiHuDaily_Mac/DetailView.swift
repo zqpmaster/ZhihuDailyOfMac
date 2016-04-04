@@ -2,12 +2,14 @@
 //  DetailView.swift
 //  ZhiHuDaily_Mac
 //
-//  Created by ZQP on 14-9-17.
-//  Copyright (c) 2014年 ZQP. All rights reserved.
+//  Created by max on 14-9-17.
+//  Copyright (c) 2014年 max. All rights reserved.
 //
 
 import Cocoa
 import WebKit
+import Alamofire
+
 class DetailView: NSView {
 
     @IBOutlet weak var webView: WebView!
@@ -28,7 +30,7 @@ class DetailView: NSView {
     var indexCom:Int{
         get{return 0}
         set{
-            let value=newValue as Int
+            _=newValue as Int
 //            var operation=NSInvocationOperation(target: self,selector: Selector("loadHtmlWithIndex:"),object: value)
 //            NSOperationQueue().addOperation(operation)
             loadHtmlWithIndex(newValue)
@@ -36,15 +38,20 @@ class DetailView: NSView {
         }
     }
     func loadHtmlWithIndex(ind:Int){
-        var managerAf=Manager.sharedInstance
+        let managerAf=Manager.sharedInstance
         let urlStr="http://news-at.zhihu.com/api/3/news/"+String(ind)
         let url=NSURL(string:urlStr)
         let urlRequest=NSURLRequest(URL: url!)
         let request=managerAf.request(urlRequest)
-        request.responseJSON { (request, response, object, error) -> Void in
-            let dic=object as NSDictionary
-            let body=dic["body"] as String
-            let cssUrl=(dic["css"] as NSArray).objectAtIndex(0) as String
+        request.responseJSON { (response) in
+            if nil == response.result.value
+            {
+                return;
+            }
+            
+            let dic=response.result.value as! NSDictionary
+            let body=dic["body"] as! String
+            let cssUrl=(dic["css"] as! NSArray).objectAtIndex(0) as! String
             let htmlStr="<link href='"+cssUrl+"' rel='stylesheet' type='text/css' />"+body
             
             let blockOpe=NSBlockOperation(block: { () -> Void in
