@@ -220,6 +220,7 @@
 		272EB78D19BC925300E66775 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = ZQP;
 				TargetAttributes = {
